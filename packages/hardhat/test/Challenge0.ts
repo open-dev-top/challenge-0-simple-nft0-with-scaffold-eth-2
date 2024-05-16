@@ -22,6 +22,10 @@ describe("🚩 Challenge 0: 🎟 Simple NFT Example 🤓", function () {
 
     it("Should deploy the contract", async function () {
       const YourCollectible = await ethers.getContractFactory(contractArtifact);
+      /*
+      类型“BaseContract & { deploymentTransaction(): ContractTransactionResponse; } & Omit<BaseContract, keyof BaseContract>”
+      缺少类型“YourCollectible”的以下属性: approve, balanceOf, getApproved, isApprovedForAll 及其他 17 项。
+      */
       myContract = await YourCollectible.deploy();
       console.log("\t"," 🛰  Contract deployed on", await myContract.getAddress());
     });

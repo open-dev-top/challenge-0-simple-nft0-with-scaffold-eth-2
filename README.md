@@ -1,8 +1,103 @@
+# My notes
+
+```shell
+alex@DESKTOP-UKE5TJQ:~/challenge-0-simple-nft0-with-scaffold-eth-2$ yarn deploy
+Nothing to compile
+No need to generate any newer typings.
+deploying "YourCollectible" (tx: 0xc77b6162607d7990a9d12fcb01454d40dcd7d1540d5846c3d5c3b681b3160b98)...: deployed at 0x75708c16FccC1b8f02E439eC734B771FDE4d84a3 with 1758855 gas
+📝 Updated TypeScript contract definition file on ../nextjs/contracts/deployedContracts.ts
+```
+
+```shell
+alex@DESKTOP-UKE5TJQ:~/challenge-0-simple-nft0-with-scaffold-eth-2$ yarn vercel
+Vercel CLI 32.7.2
+> > No existing credentials found. Please log in:
+? Log in to Vercel github
+> Success! GitHub authentication complete for opendev.top@gmail.com
+? Set up and deploy “~/challenge-0-simple-nft0-with-scaffold-eth-2/packages/nextjs”? [Y/n] y
+? Which scope do you want to deploy to? open-dev-top's projects
+? Link to existing project? [y/N] n
+? What’s your project’s name? challenge-0-simple-nft0
+? In which directory is your code located? ./
+Local settings detected in vercel.json:
+- Install Command: yarn install
+Auto-detected Project Settings (Next.js):
+- Build Command: next build
+- Development Command: next dev --port $PORT
+- Output Directory: Next.js default
+? Want to modify these settings? [y/N] n
+🔗  Linked to open-dev-tops-projects/challenge-0-simple-nft0 (created .vercel)
+🔍  Inspect: https://vercel.com/open-dev-tops-projects/challenge-0-simple-nft0/H3c2KtjWheELFwNH4ce6r8cLvhmt [2s]
+✅  Preview: https://challenge-0-simple-nft0-op9zzic1i-open-dev-tops-projects.vercel.app [2s]
+📝  Deployed to production. Run `vercel --prod` to overwrite later (https://vercel.link/2F).
+💡  To change the domain or build command, go to https://vercel.com/open-dev-tops-projects/challenge-0-simple-nft0/settings
+alex@DESKTOP-UKE5TJQ:~/challenge-0-simple-nft0-with-scaffold-eth-2$
+```
+
+```shell
+alex@DESKTOP-UKE5TJQ:~/challenge-0-simple-nft0-with-scaffold-eth-2/packages/hardhat$ yarn hardhat test
+
+  🚩 Challenge 0: 🎟 Simple NFT Example 🤓
+    YourCollectible
+          🛰  Contract deployed on 0x5FbDB2315678afecb367f032d93F642f64180aa3
+      ✓ Should deploy the contract
+      mintItem()
+          🧑‍🏫 Tester Address:  0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+          ⚖️ Starting balance:  0
+          🔨 Minting...
+          🏷  mint tx:  0x8bf55ecf838cb89538421f988d10eded7cd9e7f497bb3ccee39dc3a9168abe1c
+          ⏳ Waiting for confirmation...
+          🔎 Checking new balance:  0
+        ✓ Should be able to mint an NFT
+        ✓ Should track tokens of owner by index
+
+·--------------------------------|---------------------------|-------------|-----------------------------·
+|      Solc version: 0.8.17      ·  Optimizer enabled: true  ·  Runs: 200  ·  Block limit: 30000000 gas  │
+·································|···························|·············|······························
+|  Methods                                                                                               │
+····················|············|·············|·············|·············|···············|··············
+|  Contract         ·  Method    ·  Min        ·  Max        ·  Avg        ·  # calls      ·  eur (avg)  │
+····················|············|·············|·············|·············|···············|··············
+|  YourCollectible  ·  mintItem  ·          -  ·          -  ·     232597  ·            2  ·          -  │
+····················|············|·············|·············|·············|···············|··············
+|  Deployments                   ·                                         ·  % of limit   ·             │
+·································|·············|·············|·············|···············|··············
+|  YourCollectible               ·          -  ·          -  ·    1758855  ·        5.9 %  ·          -  │
+·--------------------------------|-------------|-------------|-------------|---------------|-------------·
+
+  3 passing (697ms)
+
+alex@DESKTOP-UKE5TJQ:~/challenge-0-simple-nft0-with-scaffold-eth-2/packages/hardhat$
+```
+
+```shell
+alex@DESKTOP-UKE5TJQ:~/challenge-0-simple-nft0-with-scaffold-eth-2$ yarn verify --network sepolia
+failed to get chainId, falling back on net_version...
+already verified: YourCollectible (0x75708c16FccC1b8f02E439eC734B771FDE4d84a3), skipping.
+alex@DESKTOP-UKE5TJQ:~/challenge-0-simple-nft0-with-scaffold-eth-2$
+```
+
+```shell
+alex@DESKTOP-UKE5TJQ:~/challenge-0-simple-nft0-with-scaffold-eth-2$ yarn vercel --prod
+Vercel CLI 32.7.2
+🔍  Inspect: https://vercel.com/open-dev-tops-projects/challenge-0-simple-nft0/6MgMwqQJz3z7yFkPUA1KNMTqgVHt [5s]
+✅  Production: https://challenge-0-simple-nft0-ihmd41bxi-open-dev-tops-projects.vercel.app [5s]
+╭──────────────────────────────────────────────────────────╮
+│                                                          │
+│           Update available! v32.7.2 ≫ v34.2.0            │
+│   Changelog: https://github.com/vercel/vercel/releases   │
+│         Run `yarn add vercel@latest` to update.          │
+│                                                          │
+╰──────────────────────────────────────────────────────────╯
+
+alex@DESKTOP-UKE5TJQ:~/challenge-0-simple-nft0-with-scaffold-eth-2$
+```
+
 # 🚩 Challenge #0: 🎟 Simple NFT Example
 
 ![readme-0](https://github.com/scaffold-eth/se-2-challenges/assets/80153681/375b7797-6839-43cd-abe5-fca94d88e300)
 
-📚 This tutorial is meant for developers that already understand the [ 🖍️ basics ](https://www.youtube.com/watch?v=MlJPjJQZtC8). 
+📚 This tutorial is meant for developers that already understand the [ 🖍️ basics ](https://www.youtube.com/watch?v=MlJPjJQZtC8).
 
 🧑‍🏫 If you would like a more gentle introduction for developers, watch our 15 video [🎥 Web2 to Web3](https://www.youtube.com/playlist?list=PLJz1HruEnenAf80uOfDwBPqaliJkjKg69) series.
 
